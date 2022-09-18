@@ -1,20 +1,30 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+#use your your f5 email before the @... Example 's-iannetta'
+  name: s-iannetta
+  labels:
+    name: s-iannetta
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-srv2
-  namespace: netta2
+  name: web-page
+#reminder to use your namespace from above
+  namespace: s-iannetta 
 spec:
   selector:
     matchLabels:
-      app: web-srv2
-  replicas: 3
+      app: web-page
+  replicas: 1
   template: # template for the pods
     metadata:
       labels:
-        app: web-srv2
+        app: web-page
     spec:
       containers:
-      - name: web-srv2
+      - name: web-page
         image: nettas/websrv2:3.1
         ports:
           - name: http
@@ -23,15 +33,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: web-srv2
-  namespace: netta2
+  name: web-page
+  namespace: s-iannetta
 
 spec:
   # This defines which pods are going to be represented by this Service
   # The service becomes a network endpoint for either other services
   # or maybe external users to connect to (eg browser)
   selector:
-    app: web-srv2
+    app: web-page
 
   type: ClusterIP
 

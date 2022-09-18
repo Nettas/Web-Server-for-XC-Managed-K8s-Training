@@ -5,7 +5,6 @@ metadata:
   name: s-iannetta
   labels:
     name: s-iannetta
-
 ---
 apiVersion: apps/v1
 kind: Deployment

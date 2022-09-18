@@ -27,9 +27,6 @@ metadata:
   namespace: web-srv
 
 spec:
-  # This defines which pods are going to be represented by this Service
-  # The service becomes a network endpoint for either other services
-  # or maybe external users to connect to (eg browser)
   selector:
     app: web-srv
 

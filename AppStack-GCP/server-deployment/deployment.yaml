@@ -33,6 +33,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: web-page
+#reminder to use your namespace from above
   namespace: s-iannetta
 
 spec:

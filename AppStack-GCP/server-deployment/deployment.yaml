@@ -1,9 +1,10 @@
 kind: Namespace
 apiVersion: v1
 metadata:
-#use your your f5 email before the @... Example 's-iannetta'
+#replace CHANGE_ME with your variable example netta
   name: CHANGE_ME
   labels:
+  #replace CHANGE_ME with same as above
     name: CHANGE_ME
 ---
 apiVersion: apps/v1

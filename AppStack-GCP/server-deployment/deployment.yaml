@@ -1,7 +1,7 @@
 kind: Namespace
 apiVersion: v1
 metadata:
-#replace CHANGE_ME with your variable example netta
+#replace CHANGE_ME with your variable or custom namespace example netta
   name: CHANGE_ME
   labels:
   #replace CHANGE_ME with same as above

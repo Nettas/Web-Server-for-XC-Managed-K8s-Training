@@ -2,16 +2,16 @@ kind: Namespace
 apiVersion: v1
 metadata:
 #use your your f5 email before the @... Example 's-iannetta'
-  name: s-iannetta
+  name: CHANGE_ME
   labels:
-    name: s-iannetta
+    name: CHANGE_ME
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: web-page
 #reminder to use your namespace from above
-  namespace: s-iannetta 
+  namespace: CHANGE_ME
 spec:
   selector:
     matchLabels:
@@ -34,7 +34,7 @@ kind: Service
 metadata:
   name: web-page
 #reminder to use your namespace from above
-  namespace: s-iannetta
+  namespace: CHANGE_ME
 
 spec:
   selector:
